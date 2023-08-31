@@ -11,14 +11,15 @@ class Customer(models.Model):
 	def __str__(self):
 		return self.name
 
-class Product(models.Model):
-    name = models.CharField(max_length=200)
+class Book(models.Model):
+    title = models.CharField(max_length=200)
+    author = models.CharField(max_length=200)
     price = models.FloatField()
     digital = models.BooleanField(default=False,null=True, blank=True)
     #image
 
     def __str__(self):
-        return self.name
+        return self.title
 
 class Order(models.Model):
 	customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
@@ -30,7 +31,7 @@ class Order(models.Model):
 		return str(self.id)
 
 class OrderItem(models.Model):
-	product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
+	book = models.ForeignKey(Book, on_delete=models.SET_NULL, null=True)
 	order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
 	quantity = models.IntegerField(default=0, null=True, blank=True)
 	date_added = models.DateTimeField(auto_now_add=True)
