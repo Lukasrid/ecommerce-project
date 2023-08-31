@@ -2,7 +2,7 @@
 <div class="row">
       {% for book in books %}
     <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'images/placeholder.png' %}" />
+        <img class="thumbnail" src="{{book.imageURL}}" />
         <div class="box-element product">
             <h5><strong>{{book.title}}</strong></h5>
             <p>{{book.author}}</p>

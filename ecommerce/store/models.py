@@ -16,10 +16,20 @@ class Book(models.Model):
     author = models.CharField(max_length=200)
     price = models.FloatField()
     digital = models.BooleanField(default=False,null=True, blank=True)
-    #image
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.title
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
+
+      
 
 class Order(models.Model):
 	customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
