@@ -10,7 +10,7 @@
             <h5><strong>{{book.title}}</strong></h5>
             <p>{{book.author}}</p>
             <hr />
-            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <button data-product="{{book.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
             <a class="btn btn-outline-success" href="#">View</a>
             <h4 style="display: inline-block; float: right">
                 <strong>£{{book.price|floatformat:2}}</strong>
