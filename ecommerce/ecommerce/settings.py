@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-%r-0qs2oqe%#9+qgw$tohojql%r2pav8q_2aqfg8!4+4u7x#fi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-lukasrid-ecommerceproje-1ivcfrzhwnx.ws-eu104.gitpod.io']
-CSRF_TRUSTED_ORIGINS=['https://8000-lukasrid-ecommerceproje-1ivcfrzhwnx.ws-eu104.gitpod.io', 'http://127.0.0.1:8000/']
+ALLOWED_HOSTS = ['8000-lukasrid-ecommerceproje-n6j7rg0tavo.ws-eu104.gitpod.io']
+CSRF_TRUSTED_ORIGINS=['https://8000-lukasrid-ecommerceproje-n6j7rg0tavo.ws-eu104.gitpod.io', 'http://127.0.0.1:8000/']
 
 
 
