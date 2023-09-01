@@ -50,7 +50,8 @@
                 {% for item in items %}
                 <div class="cart-row">
                     <div style="flex: 2"><img class="row-image" src="{{item.book.imageURL}}" /></div>
-                    <div style="flex: 2"><p>{{item.book.title}}</p></div>
+                    <div style="flex: 3"><p>{{item.book.title}}</p></div>
+                    <div style="flex: 0.5"></div>
                     <div style="flex: 1"><p>£{{item.book.price|floatformat:2}}</p></div>
                     <div style="flex: 1"><p>x{{item.quantity}}</p></div>
                 </div>
